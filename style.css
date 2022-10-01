@@ -17,25 +17,26 @@ body{
   background: var(--backgrond); 
 }
 
-header{
+.cabecalho{
 display: flex;
 justify-content: center;
 align-items: center;
 padding-top: 40px;
+
 }
 
-header a{
-  list-style: none;
+.cabecalho a{
   padding: 10px;
   color: var(--text-color);
   text-decoration: none;
 }
 
-header li{
+.cabecalho li{
+  list-style: none;
   display: inline;
 }
 
-header button{
+.cabecalho button{
   background: none;
   border: 1px solid var(--button);
   padding: 5px 30px;
@@ -45,19 +46,20 @@ header button{
   cursor: pointer;
   text-transform: uppercase;
 }
-p{
+
+.cabecalho p{
   display: none;
 }
 
-h1{
+.conteudo h1{
   margin: 40px 0 0 ;
   text-align: center;
   font-size: 80px;
   color: var(--text-color);
 }
 
-.greatCode{
-  color: var(--backgrond);
+.conteudo .greatCode{
+  color:var(--backgrond);
   text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
 }
 
@@ -72,59 +74,89 @@ h1{
   background-image: url(./assets/blur-2.png);
   background-repeat: no-repeat;
   background-position: 100% 0%;
- 
+  
 }
 
 #btn-mobile{
   visibility: hidden;
 }
 
+#logoMobile{
+  display: none;
+}
 
 @media(max-width: 768px){
+ 
+  #btn-mobile{
+    visibility: visible;
+    background: url(./assets/menu-buguer-open.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #btn-mobile.active{
+    background: url(./assets/menu-buguer-close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #logoMobile{
+    display: block;
+  }
 
- #btn-mobile{
-  visibility: visible;
- }
- #nav{
-  display: block;
-  position: absolute;
-  width:100%;
-  top: 0px;
-  right: 0px;
-  background: var(--backgrond);
-  height:100vh;
-  z-index: 1000;
-  border: 1px solid red;
- }
+  #logoDesktop{
+    display: none;
+  }
 
- #nav.active #menu{
-  display: block;
- }
- #menu a {
-  padding: 1rem 0;
- }
-
- header{
-  flex-direction: column;
- }
-
- p{
-  display: block;
-  font-size: 50px;
-  text-align: center;
-  padding: 150px 120px 150px;
+.logo{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+.blurRight{
+  background:none;
+  width: 100%;
+  margin: 0 auto;
+}
+.cabecalho{
+  flex-wrap: wrap;
 
 }
 
- /*corrigir depois*/
- .coffeContainer{
-  background-size: cover;
- }
+.cabecalho nav,.cabecalho li{
+  display: block;
+  width: 100%;
+  
+}
 
- .blurRight{
-  background-image: none;
-  width: 720px;
-  margin: 0 auto;
+.cabecalho li{
+  border-bottom: 1px solid var(--border);
+  padding: 1rem;
+}
 
- }
+.cabecalho ul{
+  padding: 0;
+  display: none;
+ 
+}
+.cabecalho p{
+  display: flex;
+  font-size: 2rem;
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.cabecalho .active ul{
+  display: block;
+  height: 100vh;
+}
+
+.cabecalho button{
+  cursor: pointer;
+}
+
+.conteudo h1{
+  font-size: 3.2rem;
+}
+
+
 }
