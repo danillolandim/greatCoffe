@@ -31,6 +31,10 @@ padding-top: 40px;
   text-decoration: none;
 }
 
+.cabecalho a:hover{
+  color:chartreuse;;
+}
+
 .cabecalho li{
   list-style: none;
   display: inline;
@@ -45,6 +49,10 @@ padding-top: 40px;
   margin-left: 40px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.cabecalho button:hover{
+  border: 1px solid chartreuse;
 }
 
 .cabecalho p{
@@ -68,6 +76,11 @@ padding-top: 40px;
   justify-content: center;
   background-image: url(./assets/blur-1.png);
   background-repeat: no-repeat;
+  max-width: 100%;
+}
+
+.coffeContainer img{
+  width: 100%
 }
 
 .blurRight{
@@ -76,6 +89,7 @@ padding-top: 40px;
   background-position: 100% 0%;
   
 }
+
 
 #btn-mobile{
   visibility: hidden;
@@ -130,7 +144,8 @@ padding-top: 40px;
 
 .cabecalho li{
   border-bottom: 1px solid var(--border);
-  padding: 1rem;
+  padding: 1.5rem;
+  font-size: 18px;
 }
 
 .cabecalho ul{
@@ -152,6 +167,10 @@ padding-top: 40px;
 
 .cabecalho button{
   cursor: pointer;
+}
+
+.cabecalho button:hover {
+  border: 1px solid chartreuse;
 }
 
 .conteudo h1{
